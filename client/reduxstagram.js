@@ -7,7 +7,7 @@ import css from './styles/style.styl';
 
 //import components
 import App from './comp/App.js';
-import Photogrid from './comp/Photogrid.js';
+import Photogrid from './comp/PG.js';
 import Single from './comp/Single.js';
 
 //import react rputer
