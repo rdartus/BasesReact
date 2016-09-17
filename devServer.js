@@ -20,6 +20,9 @@ app.get('*', function(req, res) {
 });
 
 app.listen(theport, 'localhost', function(err) {
+
+  console.log(__dirname);
+  
   if (err) {
     console.log(err);
     return;
