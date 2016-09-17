@@ -25,5 +25,5 @@ app.listen(theport, 'localhost', function(err) {
     return;
   }
 
-  console.log('Listening at http://localhost:7770');
+  console.log('Listening at http://localhost:'+theport);
 });
