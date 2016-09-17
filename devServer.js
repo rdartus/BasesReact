@@ -21,7 +21,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(theport, server_host, function(err) {
+app.listen(theport, function(err) {
 
   console.log(__dirname);
 
@@ -30,5 +30,5 @@ app.listen(theport, server_host, function(err) {
     return;
   }
 
-  console.log('Listening at http://'+server_host+theport);
+  console.log('Listening at '+theport);
 });
