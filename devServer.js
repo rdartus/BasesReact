@@ -30,5 +30,5 @@ app.listen(theport, server_host, function(err) {
     return;
   }
 
-  console.log('Listening at http://'server_host+theport);
+  console.log('Listening at http://'+server_host+theport);
 });
