@@ -6,9 +6,9 @@ import {render} from 'react-dom';
 import css from './styles/style.styl';
 
 //import components
-import App from './components/App.js';
-import Photogrid from './components/Photogrid.js';
-import Single from './components/Single.js';
+import App from './comp/App.js';
+import Photogrid from './comp/Photogrid.js';
+import Single from './comp/Single.js';
 
 //import react rputer
 import{Router,Route,IndexRoute, browserHistory} from 'react-router';
