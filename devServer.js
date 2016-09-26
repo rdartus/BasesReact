@@ -3,6 +3,7 @@ var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.dev');
 var mongoose = require('mongoose');
+
 var app = express();
 var compiler = webpack(config);
 
@@ -24,16 +25,16 @@ mongoose.connect(db_uri, function (err, res) {
 
 app.use('/api', require('./server/routes/api'));
 
-// app.use(require('webpack-dev-middleware')(compiler, {
-//   noInfo: true,
-//   publicPath: config.output.publicPath
-// }));
-//
-// app.use(require('webpack-hot-middleware')(compiler));
-//
-// app.get('*', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'index.html'));
-// });
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
+
+app.use(require('webpack-hot-middleware')(compiler));
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.listen(theport, function(err) {
 
